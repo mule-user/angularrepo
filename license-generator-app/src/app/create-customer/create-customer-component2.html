@@ -1,0 +1,41 @@
+<div [hidden]="submitted" style="width: 400px;">
+  <form #signForm="ngForm" (ngSubmit)="onSubmit()">
+    <fieldset>
+      <legend>License Info</legend>
+      <div class="form-group">
+        <label for="name">licenseStartdate </label>
+        <input type="date" class="form-control" id="licenseStartdate" required [(ngModel)]="customer.licenseStartdate" name="licenseStartdate" placeholder="Enter the start date">
+      </div>
+
+      <div class="form-group">
+        <label for="name">licenseEnddate </label>
+        <input type="date" class="form-control" id="licenseEnddate" required [(ngModel)]="customer.licenseEnddate" name="licenseEnddate" placeholder="Enter the end date">
+      </div>
+
+      <div class="form-group">
+        <label for="name">licenseQuantity </label>
+        <input type="text" class="form-control" id="licenseQuantity" [(ngModel)]="customer.licenseQuantity" name="licenseQuantity" placeholder="Enter the license quantity">
+      </div>
+
+      <div class="form-group">
+        <label for="name">SerialNumber </label>
+        <input type="text" class="form-control" id="serialNumber" required [(ngModel)]="customer.serialNumber" name="serialNumber" placeholder="Enter the serial number">
+      </div>
+
+      <div class="form-group">
+        <label for="name">validProductVersion </label>
+        <input type="text" class="form-control" id="validProductVersion" [(ngModel)]="customer.validProductVersion" name="validProductVersion" placeholder="Enter the details">
+      </div>
+
+      <div class="form-group">
+        <label for="name">maintenancePeriod </label>
+        <input type="text" class="form-control" id="maintenancePeriod" [(ngModel)]="customer.maintenancePeriod" name="maintenancePeriod" placeholder="Enter the details">
+      </div>
+      <div class="form-group">
+        <label for="name">hardwareId </label>
+        <input type="text" class="form-control" id="hardwareId" [(ngModel)]="customer.hardwareId" name="hardwareId" placeholder="Enter the hardwareId">
+      </div>
+    </fieldset>
+    <button type="submit" class="btn btn-success" [disabled]="!signForm.valid">Submit</button>
+  </form>
+</div>
