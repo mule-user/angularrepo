@@ -1,0 +1,101 @@
+<h3>Create New License</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form #signForm="ngForm" (ngSubmit)="onSubmit()">
+    <fieldset>
+      <legend>Customer Info</legend>
+      <div class="form-group">
+        <label for="name"><span class="req">*</span>Name </label>
+        <input type="text" class="form-control" id="fullName" required [(ngModel)]="customer.fullName" name="fullName" placeholder="Enter your fullname..." #name="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label for="name">company </label>
+        <input type="text" class="form-control" id="company" required [(ngModel)]="customer.company" name="company" placeholder="Enter the company name">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Street </label>
+        <input type="text" class="form-control" id="street" [(ngModel)]="customer.street" name="street" placeholder="Enter your street">
+      </div>
+
+      <div class="form-group">
+        <label for="name"><span class="req">*</span>City </label>
+        <input type="text" class="form-control" id="city" [(ngModel)]="customer.city" name="city" placeholder="Enter your city">
+      </div>
+
+      <div class="form-group">
+        <label for="name">zipCode </label>
+        <input type="text" class="form-control" id="zipCode" [(ngModel)]="customer.zipCode" name="zipCode" placeholder="Enter your zipcode">
+      </div>
+
+      <div class="form-group">
+        <label for="name">registerTo </label>
+        <input type="text" class="form-control" id="registerTo" [(ngModel)]="customer.registerTo" name="registerTo" placeholder="Enter the details">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Email </label>
+        <input type="text" class="form-control" id="email" required [(ngModel)]="customer.email" name="email" placeholder="Enter your email">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Telephone </label>
+        <input type="text" class="form-control" id="telephone" [(ngModel)]="customer.telephone" name="telephone" placeholder="Enter your telephone">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Fax </label>
+        <input type="text" class="form-control" id="fax" [(ngModel)]="customer.fax" name="fax" placeholder="Enter the details">
+      </div>
+
+      <div class="form-group">
+        <label for="name">Country </label>
+        <input type="text" class="form-control" id="country" required [(ngModel)]="customer.country" name="country" placeholder="Enter your country">
+      </div>
+    </fieldset>
+        <fieldset>
+          <legend>License Info</legend>
+          <div class="form-group">
+            <label for="name">licenseStartdate </label>
+            <input type="date" class="form-control" id="licenseStartdate" required [(ngModel)]="customer.licenseStartdate" name="licenseStartdate" placeholder="Enter the start date">
+          </div>
+
+          <div class="form-group">
+            <label for="name">licenseEnddate </label>
+            <input type="date" class="form-control" id="licenseEnddate" required [(ngModel)]="customer.licenseEnddate" name="licenseEnddate" placeholder="Enter the end date">
+          </div>
+
+          <div class="form-group">
+            <label for="name">licenseQuantity </label>
+            <input type="text" class="form-control" id="licenseQuantity" [(ngModel)]="customer.licenseQuantity" name="licenseQuantity" placeholder="Enter the license quantity">
+          </div>
+
+          <div class="form-group">
+            <label for="name">SerialNumber </label>
+            <input type="text" class="form-control" id="serialNumber" required [(ngModel)]="customer.serialNumber" name="serialNumber" placeholder="Enter the serial number">
+          </div>
+
+          <div class="form-group">
+            <label for="name">validProductVersion </label>
+            <input type="text" class="form-control" id="validProductVersion" [(ngModel)]="customer.validProductVersion" name="validProductVersion" placeholder="Enter the details">
+          </div>
+
+          <div class="form-group">
+            <label for="name">maintenancePeriod </label>
+            <input type="text" class="form-control" id="maintenancePeriod" [(ngModel)]="customer.maintenancePeriod" name="maintenancePeriod" placeholder="Enter the details">
+          </div>
+          <div class="form-group">
+            <label for="name">hardwareId </label>
+            <input type="text" class="form-control" id="hardwareId" [(ngModel)]="customer.hardwareId" name="hardwareId" placeholder="Enter the hardwareId">
+          </div>
+        </fieldset>
+        <button type="submit" class="btn btn-success" [disabled]="!signForm.valid">Submit</button>
+  
+    
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

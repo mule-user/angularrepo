@@ -1,0 +1,29 @@
+<h2>Customer Details</h2> 
+
+<hr/>
+<div *ngIf="customer">
+  <div>
+    <label><b>Name: </b></label> {{customer.fullName}}
+  </div>
+  <div>
+    <label><b>Company: </b></label> {{customer.company}}
+  </div>
+  <div>
+    <label><b>Email Id: </b></label> {{customer.email}}
+  </div>
+  <div>
+    <label><b>LicenseStartdate: </b></label> {{customer.licenseStartdate}}
+  </div>
+  <div>
+    <label><b>LicenseEnddate: </b></label> {{customer.licenseEnddate}}
+  </div>
+  <div>
+    <label><b>SerialNumber: </b></label> {{customer.serialNumber}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to License List</button><br>
+
+

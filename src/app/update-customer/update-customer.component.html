@@ -1,0 +1,26 @@
+<h3>Update Customer</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="fullName" required [(ngModel)]="customer.fullName" name="fullName">
+    </div>
+
+    <div class="form-group">
+      <label for="name">SerialNumber</label>
+      <input type="text" class="form-control" id="serialNumber" required [(ngModel)]="customer.serialNumber" name="serialNumber">
+    </div>
+
+    <div class="form-group">
+      <label for="name">LicenseStartdate</label>
+      <input type="text" class="form-control" id="licenseStartdate" required [(ngModel)]="customer.licenseStartdate" name="licenseStartdate">
+    </div>
+
+    <div class="form-group">
+      <label for="name">LicenseEnddate</label>
+      <input type="text" class="form-control" id="licenseEnddate" required [(ngModel)]="customer.licenseEnddate" name="licenseEnddate">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>

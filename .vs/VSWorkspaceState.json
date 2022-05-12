@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\create-customer",
+    "\\src\\app\\customer-details",
+    "\\src\\app\\customer-list",
+    "\\src\\app\\sign-in",
+    "\\src\\app\\sign-up",
+    "\\src\\app\\update-customer",
+    "\\src\\environments"
+  ],
+  "PreviewInSolutionExplorer": false
+}

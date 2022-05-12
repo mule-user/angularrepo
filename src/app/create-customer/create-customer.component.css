@@ -1,0 +1,25 @@
+input.ng-touched.ng-invalid {
+     border:1px solid red;
+}
+.custom-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.custom-info.input-box{
+    display: flex;
+    align-items: center;
+}
+
+  .custom-info.input-box label{
+    min-width: 120px;
+  }
+  .custom-info.input-box input{
+    padding: 5px;
+    margin-bottom: 15px;
+    width: 300px;
+  }
+  .custom-info.input-box textarea {
+    padding: 5px;
+    width: 300px;
+  }
